@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Compétition de spécificités en CSS</title>
+		<style>
+		header.navigation p {
+		  color: blue;
+		}
+		p.blurb {
+		  color: red;
+		}
+		/*p {
+		  color: green !important;
+		}*/
+		</style>
+	</head>
+	<body>
+		<h1>Compétition de spécificités en CSS</h1>
+		<header class="navigation">
+		  <p class="blurb">En cas de conflit entre les règles CSS il convient de considérer quelle règle sera appliquée en fonction des spécifités contenues dans leurs règles</p>
+		  <p>Pour le définir,il faut attribuer des points en fonctions du nombre de spécificités et de leur importance dans la hiérarchie. Explications : </p>
+		  <ol>La hiérarchie se classe de la colonne 1 à la colonne 4 :
+		  	<li>&lt;style&gt; est au sommet. Sa colonne comptabilisera les milliers (1000) </li>
+		  	<li>&lt;toto id=""&gt; est en second. Sa colonne comptabilisera les centaines (0100)</li>
+		  	<li>&lt;toto class=""&gt; est en troisième. Sa colonne comptabilisera les dizaines (0010)</li>
+		  	<li>&lt;toto&gt; est en quatrième. Sa colonne comptabilisera les unités (0001)</li>
+		  </ol>
+		  <p>Pour attribuer les points, il suffira de compter chaque spécificité et de positionner son nombre d'occurance dans la colonne de 1 à 4 qui lui correspond. Le nombre supérieur l'emporte.<br />
+		  	Ainsi, si l'on considère : header.navigation p { color: blue;} il y a une fois classe et 2 fois élément ; pas de ID et pas de Style donc : 0012. Son score de spécificités est 12<br />
+		  	Elle perdrait contre #mon_para p {color: white;} qui vaudrait 0101 (101).</p>
+
+		</header>
+		<h2>Solution plan B</h2>
+		<p>On peut toujours utiliser l'attribut <em>!important</em> qui est l'indicateur de priorité absolue mais ce n'est à utiliser que si l'on n'a pas d'autre choix. C'est une mauvaise pratique qui conduit à avoir un site où l'on ne comprend plus rien !</p> 
+	</body>
+</html>

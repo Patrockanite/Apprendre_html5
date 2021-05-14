@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Positionner des éléments</title>
+        <style>
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+        h1 {
+        margin-bottom: 15px;
+        }
+
+        div#container, #container_2,#container_3 {
+        background-color: #00FFFF;
+        }
+        p {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+        #p1,#p5,#p9 {
+        background-color: #A52A2A;
+        position: relative;
+       
+        }
+        #p1{
+            top: 35px;
+            left: 40px;
+        }
+        #p2, #p6,#p10 {
+        background-color: #DEB887;
+        }
+        #p3, #p7,#p11 {
+        background-color: #5F9EA0;
+        }
+        #p4, #p8,#p12 {
+        background-color: #FF7F50;
+        }
+        #p5,#p9{
+            position: relative;
+            top: 65px;
+            left: 65px;
+        }
+        #p7,#p11{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #container_3{
+            position: relative;
+        }
+        em{
+            font-weight: bold;
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Positionner des éléments</h1>
+        <h3>Conteneur 1 : Position relative de P1</h3>
+        <div id="container">
+        <p id="p1">P1</p>
+        <p id="p2">P2</p>
+        <p id="p3">P3</p>
+        <p id="p4">P4</p>
+        <section>Dans cet exemple, le P1 est postionné relativement au conteneur bleu. On lui a appliqué un offset à gauche et en haut. On l'a donc décalé vers le bas et vers la droite. Pour le navigateur, il reste dans le flux normal et se trouve positonné en haut à gauche. Les autres éléments ne prendont donc pas sa place.</section>
+        </div>
+
+        <h3>Conteneur 2 : Position absolue de P7</h3>
+        <div id="container_2">
+        <p id="p5">P5</p>
+        <p id="p6">P6</p>
+        <p id="p7">P7</p>
+        <p id="p8">P8</p>
+        <section>Dans ce second exemple, le P5 est positonné relativement au conteneur bleu. On lui a appliqué un offset à gauche et en haut. On l'a donc décalé vers le bas et vers la droite. On a voulu positionner le P7 à la place du P5 en lui appliquant un positionnement absolu à top:0 et left:0 <em>mais ça ne marche pas !</em><br>
+        La raison à cela est que le conteneur 2 qui est le parent du P7 est par défaut en position statique. (A l'exception de HTML, par défaut, tous les éléments sont en position statique.) Il faudrait pour que cela fonctionne que le conteneur 2 ne soit plus en position statique mais en absolu ou en relatif. Le positionnement absolu est relatif à son ancêtre le plus proche qui est défini avec une valeur non-statique donc absolue ou relative</section>
+        </div>
+
+        <h3>Conteneur 3 : Position absolue de P11</h3>
+        <div id="container_3">
+        <p id="p9">P9</p>
+        <p id="p10">P10</p>
+        <p id="p11">P11</p>
+        <p id="p12">P12</p>
+        <section>Dans ce troisème exemple, le P9 est positonné relativement au conteneur bleu. On lui a appliqué un offset à gauche et en haut. On l'a donc décalé vers le bas et vers la droite. On a voulu positionner le P11 à la place du P9 en lui appliquant un positionnement absolu à top:0 et left:0 et <em>cette fois ça marche !</em></section><br>
+        La raison à cela est que <em>le conteneur 3 qui est le parent du P7 a été défini en position relative.</em> (Rappel : A l'exception de HTML, par défaut, tous les éléments sont en position statique.) Ceci permet au P11 de rester positionné de manière absolue de son parent positionné en relatif.</section>
+        </div>
+
+
+    </body>
+</html>

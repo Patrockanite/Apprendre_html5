@@ -1,0 +1,10 @@
+body {
+  background-color: gray;
+  font-size: 130%;
+}
+.externe {
+	background-color: yellow ;
+	color: blue ;
+	width: 70% ;
+	margin-left: 15%;
+}

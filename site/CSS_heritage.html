@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<htm lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>l'héritage en CSS</title>
+		<style>
+			/* tous les éléments héritent de body */
+			body {
+			  color: red;
+			  text-align: center;
+			  font-family: Helvetica;
+			}
+			/* la règle CSS color appliquée à p sera priorisée */
+			p {
+			  color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Exemple de cascade CSS</h1>
+		<h2>Sous-titre 1</h2>
+		<p>L'héritage nous permet de déterminer un style global sur les éléments parents, puis d'affiner les styles de certains des éléments enfants selon les besoins. Une telle approche rend l'écriture CSS très efficace.</p>
+		<h2 style="color: green;">Sous-titre 2</h2>
+		<p>Le sous-titre de ce paragraphe est restylé en ligne. color: green; s'applique maintenant malgré l'héritage des règles aplliquées à body.<br>Cependant, les règles fusionnent c'est pour cette raison que text-align: center; et font-family: Helvetica; s'appliquent. Seule la nouvelle règle déterminée dans le ligne de h2 remplace la règle du parent.</p>
+		<p>Evidemment, l'héritage descend des parents aux enfants et ne remontent pas des enfants vers les parents ! </p>
+	</body>
+</html>

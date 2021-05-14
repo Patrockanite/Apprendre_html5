@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+            /*box-sizing: border-box;*/ /* Ceci ne fonctionne pas car les enfants n'héritent pas des propriétés de taille */
+        }
+        *{
+            box-sizing: border-box; /* ceci permet d'appliquer cette règle à tous les éléments - il ne s'agit pas d'un héritage */
+        }
+        h1{
+            /*margin-top: 0;*/
+            margin-bottom: 40px;
+        }
+        #box_1{
+            background-color: blue;
+            padding: 10px 30px 10px 30px;
+            border: 20px solid black;
+            margin: 30px;
+            width: 300px;
+            /*box-sizing: border-box;*/
+        }
+        #exemple_1{
+            background-color: chartreuse;
+        }
+        .explications{
+            font-size: 130%;
+        }
+    </style>
+    <title>Selecteur étoile</title>
+</head>
+<body>
+    <h1>Utiliser le sélecteur étoile (*)</h1>
+    <section class="explications">Il faut savoir que certaines propriétés telles que la taille des boîtes ne se transmettent pas en héritage. L'exemple ci-dessous va illustrer ceci :</section>
+    <div id="box_1">
+        <div id="exemple_1">
+            Si l'on place <em>box-sizing: border-box; </em>dans body, on peut penser que tous les enfants de body hériteront de cette proporiété. Ce n'est pas le cas !
+        </div>
+
+    </div>
+    <section class="explications">
+        <p>Pour imposer cette règle à tous les éléments, il faut utliser le sélecteur *. Cela revient à dire applique cette règle quel que soit l'élément. C'est ce qu'on a fait ici. </p>
+        <h3>Cumule ou non des propriétés</h3>
+        <p>Une autre chose importante à connaître est que les margin left ou right de 2 éléments se cumulent alors que les margin top ou bottom de 2 éléments ne se cumulent pas : la plus importante l'emportera. <br>Donc margin-bottom:30px; d'un élément suivi de margin-top:20px; d'un autre élement donnera 30px d'écart entre les deux alors que margin-right:20px d'un élément suivi de margin-left:30px d'un autre élément donnera 50px entre les éléments.</p>
+    </section>
+</body>
+</html>

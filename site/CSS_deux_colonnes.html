@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Design de deux colonnes</title>
+    <style>
+
+    div {
+    /* background-color: #00FFFF;*/
+    }
+    p {
+    width: 50%; /*Permet de s'adapter au taille de fenêtre */
+    /*border: 1px solid black;*/
+    float: left;
+    padding: 10px;
+    }
+
+    #p1 {
+        
+    /*background-color: #A52A2A;*/
+    }
+    #p2 {
+        /*clear: both;*/
+    /*background-color: #DEB887;*/
+    }
+
+    section {
+    clear: left;
+    }
+    *{
+        box-sizing: border-box;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Design de deux colonnes</h1>
+
+    <div>
+        <p id="p1">On va positionner les deux paragraphes respectivement à gauche et à droite. Pour que la bordure ne vienne pas repousser le paragraphe 2 sous le paragraphe 1 à cause le la bordure, il faut appliquer un box-sizing : border. Ainsi, chaque box occupera réellement 50% de la div qui occupera elle même pratiquement la largeur de la fenêtre du navigateur.</p>
+
+        <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!</p>
+        
+        <section>Ceci est un contenu ordinnaire positionné après deux paragraphes sous forme de "boxes".</section>
+    </div>
+
+
+</body>
+</html>

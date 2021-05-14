@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>définir relativement Font Size</title>
+<style>
+    body{
+        font-size: 120%;
+    }
+</style>
+</head>
+<body>
+<div>Regular text
+    <p>Le texte sera de 120% de la taille de la police par défaut du navigateur (16px en général pour tous les navigateurs).</p>
+</div>
+<div style="font-size: 2em;">2em text : Les em correspondent à la largeur d'une lettre donc 2em multiplie la taille des lettres par 2.
+  <div style = "font-size: 4em;">4em text : Ces valeurs sont toujours relatives à ce qui avait déjà été défini en amont.
+    <div style="font-size: 0.5em;">2em again! Le texte est revenu à la taille précédente en le multipliant par 0.5 pour revenir à 2em mais des 4em déjà issus des 2em issus de 120%</div>
+  </div>
+</div>
+</body>
+</html>

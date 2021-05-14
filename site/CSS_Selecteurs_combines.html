@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Sélecteurs combinés</title>
+		<style>
+			/* tous les éléments de article qui sont directement enfant de section (I.E.)
+				tous les élements de article dont les parents immédiats sont des éléments section */
+				/*Ne pas confondre enfant et compris dans !*/
+			section > article{ 
+				width:900px;
+				color: green;
+				font-size: 24px;
+			}
+
+			/* Tous les éléments h2 qui sont directement des enfants d'élément section (I.E.),
+				tous les éléments h2 dont les parents immédiats sont des éléments section */
+			section > h2{
+				color: green;
+			}
+
+			/* Tous éléments span descendant dans article même s'ils ne sont enfant direct */
+			article span{
+				color: red;
+				font-size: 1.2em;
+			}
+
+		/* all with class="highlight" */
+		.highlight {
+		  background-color: green;
+		}
+
+		/* all p elements with class="highlight" */
+		xxx {  
+		  font-style: italic;
+		}
+
+		/* all elements with class 'highlight' as well as with class 'mainpoint'. */
+		.highlight.mainpoint {
+		  color: red;
+		  background-color: black;
+		  font-size: 1.3em;
+		  width: 75%;
+		}
+
+		</style>
+	</head>
+	<body>
+
+		<h1>Sélecteurs d'éléments combinés</h1>
+		<p>Le design n'est pas bien joli mais le but est de voir ici les effets des règles CSS et comment les appliquer</p>
+		<section>
+			<h2>Sélecteurs enfants</h2>
+			<article>
+				Le texte de cet article est formaté ainsi car &lt;article&gt; est un enfant direct de &lt;section&gt;. L'article :<br>Hier le quinze de France affrontait le Pays de Galle pour le tournoi des 6 nations 2021. Le pays de Galle venait à Paris chercher une victoire pour s'octroyer le grand Chelem. A la 80ème minute la France était menée mais le match n'était pas fini. Et comme chacun sait, c'est à la fin du bal qu'on paye les musiciens ! L'équipe de France a finalement battu les gallois et reste dans la compétition même si il faudra battre l'Ecosse de 21 points et avoir le bonus offensif pour gagner le tournoi.
+			</article>
+		</section>
+		<h2>Sélecteurs descendant</h2>
+		<article>
+			<p>Ce paragraphe appartient à un artcile qui n'est pas dans une section. La règle CSS appliquée au-dessus ne s'aplliquera donc pas à lui. Mais dans ce paragraphe, un &lt;span&gt; <span>qui commence ici est un sélecteur descendant de article même s'il n'est pas un enfant direct de &lt;article&gt;. (Il est inclus dedans) </span> La règle qui s'applique au selecteur &lt;span&gt; descendant de &lt;article&gt; s'applique à ce paragraphe</p> 
+		</article>
+		<h2 class="highlight">La classe highlight</h2>
+
+	<p>Ce paragraphe n'est pas mis en page avec cette classe</p>
+	<p class="highlight">Par contre ce paragraphe utilise la classe highlight</p>
+	<div class="mainpoint highlight">Et cette partie utilise les classes mainpoint et highlight qui sont indiquées dans l'attribut class en étant énumérées séparées par des espaces sans virgules.
+	</div>
+
+	</body>
+</html>

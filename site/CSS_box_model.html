@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 20px; /* pour mieux voir le fond bleu */
+ 
+}
+#content {
+  background-color: #90EE90; /*green*/
+}
+#boite_exemple_1{
+    background-color: #90EE90; /* inutile ici */
+    padding: 10px 30px 10px 30px;
+    border: 20px solid black;
+    margin: 40px;
+    width: 300px;
+    box-sizing: content-box; /* règle appliquée par défaut */
+}
+#boite_exemple_2{ /* on pouvait faire plus simple en appliquant la règle du dessus à cette boite */
+    background-color: #90EE90; 
+    padding: 10px 30px 10px 30px;
+    border: 20px solid black;
+    margin: 40px;
+    width: 300px;
+    box-sizing: border-box; /* et en appliquant uniquement cette règle à exemple_2 mais j'ai préféré ne pas simplifier pour me voir les règles */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Modèles de boite HTML - styler un élément comme une "boite"</h1>
+
+<div id="box">
+  <div id="content">Normalement, cette "boite" de type bloc est automatiquement décollée des bord de la fenêtre de 8px. Cette règle s'applique car faute de règle définie par nous, le navigateur utilise sa propre feuille de style par défaut. On peut le voir en examinant l'élément dans le navigateur (on le voit mieux sur Chrome que sur FireFox). <img src="images/inspection_style_chrome.jpg" width="850px" height="250px" alt="html box" title="inspecteur google" />
+        <p>Ici cette règle par défaut a été remplacée par une initialisation de margin et padding à 0 de body.</p>
+    </div>
+    <div id="boite_exemple_1">
+        Cette boite va servir d'exemple 1. Les règles s'appliquent à la boite de contenu grâce à la règle  box-sizing: content-box; . Ces informations sont importantes car l'exemple 2 aura les mêmes règles à l'exception de box-sizing: et cela changera son comportement.
+    </div>
+    <div id="boite_exemple_2">
+        Cette boite va servir d'exemple 2. Les règles s'appliquent à toute la boite grâce à la règle  box-sizing: border-box; . Ces informations sont importantes car cette exemple 2 a les mêmes règles à l'exception de box-sizing: et cela change son comportement. <em>Ici la largeur spécifiée s'applique à l'ensemble de l'élément et non à son seul "contenu".</em> <b>C'est cette règle qu'appliquent les templates modernes tels que Bootstrap !</b>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Les liens</title>
+    </head>
+    <body>
+        <h1>Les liens</h1>
+        <h2>Toujours sans CSS</h2>
+        <H3>Les liens hypertext</H3>
+            <p>La balise a href = "l'adresse" permet de pointer l'adresse.<br /></p>
+        <h4>Chemins absolus :</h4>
+            <p>On indique l'adresse complète comme ici :<br />
+            <!--Ouverture dans une autre fenêtre-->
+            <a href = "https://www.gnfa-auto.fr/" target="_blank">Site du GNFA</a></p>
+        <h4>Chemins relatifs :</h4>
+            <p>Si les pages sont contenues dans le même répertoire, il suffit de renseigner le nom du fichier entre les " "comme ici :<br />
+            <a href="index.html">Accueil</a><br /><br />
+            Si elles ne sont pas contenues dans le même répertoire, il faudra ajuster le chemin relatif selon les cas comme ici :<br />
+            <!--Ajout d'une info-bulle-->
+            <a href="Autre_repertoire/autre_page.html" title="je suis l'info bulle">Page dans un autre répertoire</a></p>
+        <h3>Les ancres (ID)</h3>
+            <p>Les ancres sont des points de repères qu'on peut pointer par des liens, sélectionner pour y appliquer du code JS, styler avec du CSS</p>
+        <p id="mon_ancre">Le tout début de ce morceau de texte a une ancre qui s'appelle mon_ancre.<br />
+        On va pouvoir revenir au début du texte en cliquant sur un lien.<br />
+        Ce lien se trouve ci-dessous :<br />
+        <a href="#mon_ancre">Retour à mon ancre</a></p>
+    </body>
+</html>

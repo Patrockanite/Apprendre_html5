@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Debut en CSS</title>
+	<!-- Normalement on externalise le styme mais ici c'est juste pour 
+		des premiers essais -->
+	<style>
+		h1 {
+			color:red ;
+			text-align: center;
+		}
+		p {
+			color: white;
+			width: 250px ;
+			background-color:black ;
+		}
+		/* Ici la classe paragrahe en_rouge */
+		.en_rouge{
+			width: 350px;
+			color: red;
+			font-weight: bold;
+		}
+		/* Règle CSS appliquée à une identité */ 
+		#identité_unique{
+			font-size: 1.2em;
+			color: blue ;
+			background-color:rgb(141,133,133) ;
+			width: 200px ;
+		}
+	</style>
+</head>
+	<body>
+		<h1>Début en CSS</h1>
+		<h2>Premier chapitre</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<h2>Second chapitre</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<h2>Les classes</h2>
+		<p class="en_rouge">
+			Ce paragraphe utilise la classe "en_rouge" qui est large de 350px, est en Font bold et rouge. Celui du dessous n'utilise pas la classe en_rouge. 
+		C'est pour cette raison qu'il se présente de manière différente. En revanche, le fond noir est hérité de la règle (role) CSS appliquée à &lt;p&gt;.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<h2>les ID</h2>
+		<p id="identité_unique">Ce paragraphe est identifié "identité_unique". Assez logiquement, une identité ne peut être utilisée que pour un élément html unique du document.
+			Ceci permettra aussi de l'utiliser pour du JavaScript. L'élément "identité_unique" utilise la règle CSS appliquée à cet élément. C'est ce qui permet cette mise en forme</p> 
+	</body>
+</html>

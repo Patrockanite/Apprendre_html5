@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Les Eléments flottants</title>
+        <style>
+
+        div {
+        background-color: #00FFFF;
+        }
+        p{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .un_et_deux > p {
+       
+        float: left;
+        margin-right: 10px;
+        }
+
+        #p1,#p5,#p9 {
+        background-color: #A52A2A;
+       
+        }
+        #p2,#p6,#p10 {
+        background-color: #DEB887;    
+       
+        }
+        #p3,#p7,#p11 {
+        background-color: #5F9EA0;
+       
+        }
+        #p4,#p8,#p12 {
+        background-color: #FF7F50;
+        }
+        #p5,#p7{
+            clear: left;
+        }
+        #p9{
+            float: left;
+            height: 120px;
+        }
+        #p10{
+            float: right;
+            height: 180px;
+        }
+        #p11{
+            /*clear: left;*/
+            /*clear: right;*/ /*pour voir la différence*/
+            clear: both; /*Pour résoudre les problèmes de recouvrement */
+        }
+        span{
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Les éléments flottants</h1>
+
+        <div class="un_et_deux">
+            <p id="p1">P1</p>
+            <p id="p2">P2</p>
+            <p id="p3">P3</p>
+            <p id="p4">P4</p>
+            <section>Section 1 : Il s'agit ici d'un contenu ordinnaire situé après les zones de paragraphe qui nous permet de voir son comportement. On va commencer par faire flotter les 4 paragraphes à gauche. Ils sont exclus du flux normal de documents. Ceci explique pourquoi le fond bleu n'est présent que derrière cette section de texte.</section>
+        </div>
+        <div class="un_et_deux">
+            <p id="p5">P5</p>
+            <p id="p6">P6</p>
+            <p id="p7">P7</p>
+            <p id="p8">P8</p>
+            <section style="clear: left;">Section 2 : Ici, les 4 paragraphes sont flottants à gauche. Pour avoir le P7 sur sa propre ligne, on lui a imposé un clear:left. Ainsi rien ne flotte à sa gauche. Le P8 ne flotte pas à sa droite. Il est jsute venu se potionner à la suite du P7. Afin que le texte de cette section se positionne sous les paragraphes on lui a imposé un clear:left. Les paragraphes flottants n'étant pas dans le flux, la section se serait positionnée juste sous la précédente</section>
+        </div>
+
+        <div>
+            <p id="p9">P9</p>
+            <p id="p10">P10</p>
+            <p id="p11">P11</p>
+            <p id="p12">P12</p>
+            <section style="clear: left;">Section 3 : On va flotter le P9 vers la gauche et le P10 vers la droite. Du coup le P10 et le p11 prennent "leurs places" et se trouve cachés sous le P9. Pour éviter ce problème on va imposer un clear:left ou right au P11 (il a un flottant de chaque côté).<br>Un autre problème se pose si l'on allonge le P9 : Il vient couvrir le P11. Pour éviter ce problème, on va utiliser clear: both qui va empêcher les flottants à droite, à gauche et qui va lui permettre de prendre sa propre ligne et ainsi ne pas être chevauché <span>(Enfin, si j'ai bien compris).</span></section>
+        </div>
+
+
+        </body>
+</html>

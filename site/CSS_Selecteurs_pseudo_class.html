@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>selecteurs pseudo classe</title>
+    <style>
+    	header li{
+    		list-style: none; /* pas de point ni autre en début de ligne */    		
+    	}
+    	a:link, a:visited{
+    		text-decoration: none; /* pas de soulignement du lien */
+    		background-color: green;
+    		border: 1px solid blue;
+    		color: black ;
+    		display: block; /*sinon le fond du lien ne fait que la longueur du mot (c'est une balise en ligne) */
+    		width: 170px; /* pour avoir des fond de lien qui ne font pas la largeur de la page maintenant qu'ils sont bloc */
+    		text-align: center; /* texte au centre */
+    		margin-bottom: 3px; /* marge de 3px sous le lien pour les décoller les uns des autres */
+    	}
+    	a:hover, a:active {
+    		background-color: red;
+    		color: purple ;
+    	}
+    	header li:nth-child(3){ /* le 3ème enfant de la liste contenu dans header appliquera cette règle CSS */
+    		font-size: 1.3em;
+    	}
+
+    	section div:nth-child(odd){ /* chaque enfant div contenu dans section et qui est un nième impair appliquera cette règle */  
+    		background-color: gray;
+    	}
+    	section div:nth-child(4):hover {
+    		background-color: green;
+    		cursor: pointer;
+    	}
+    </style>
+</head>
+<body>
+<h1>Pseudo Class Selectors</h1>
+<!-- Le header va être utilisé pour y placer un menu qu'on va styliser -->
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+    <!-- On va viser ce lien avec son numéro de nième enfant pour modifier son style -->
+    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+  </ul>
+</header>
+<h2>Utilisation des pseudo-classes pour styliser le menu</h2>
+<p>Pour le menu on a utilisé un liste non-ordonnée.<br>
+	On va commencer par enlever les points de chaque li de la liste.<br>
+	Puis on va transformer les liens en des espèces de boutons en utilisant CSS et les peudo-sélecteurs.</p>
+<section>
+  <div>DIV 1</div>
+  <div>DIV 2</div>
+  <div>DIV 3</div>
+  <div>DIV 4</div>
+  <div>DIV 5</div>
+  <div>DIV 6</div>
+  <div>DIV 7</div>
+  <div>DIV 8</div>
+  <div>DIV 9</div>
+  <div>DIV 10</div>
+  <div>DIV 11</div>
+  <div>DIV 12</div>
+  <div>DIV 13</div>
+  <div>DIV 14</div>
+  <div>DIV 15</div>
+  <div>DIV 16</div>
+  <div>DIV 17</div>
+  <div>DIV 18</div>
+  <div>DIV 19</div>
+  <div>DIV 20</div>
+</section>
+
+</body>
+</html>

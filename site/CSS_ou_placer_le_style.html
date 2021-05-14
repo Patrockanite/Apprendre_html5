@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Placement du style</title>
+		<link rel="stylesheet" href="ou_placer_style.css">
+		<!-- En principe, on évite ce qui suit -->
+		<style>
+
+			h2 {
+			  color: maroon;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>Placement du style</h1>
+		<h2>Style placé en head</h2>
+		<p>Les sous-titres appliquent une règle CSS définie dnas le head </p>
+		<h2>Style placé dans une ligne</h2>
+		<!-- En principe, on évite ce qui suit ici aussi ! -->
+		<p style="text-align: center;">je suis centré par une règle CSS dans la ligne!</p>
+		<h2 class="externe">Style externalisé</h2>
+		<p class="externe">Le titre de ce paragraphe, le paragraphe lui même ainsi que le fond du document et sa font appliquent les règles CSS définies dans une feuille externe<br>
+		En dehors de la portabilité et de la facilité de maintenance, l'un des avantages majeurs est que la feuille de style n'est chargée qu'une seule fois pour toutes les pages du site (à condition que le style s'applique à toutes les pages évidemment.</p> 
+
+	</body>
+</html>
